@@ -23,3 +23,8 @@ I want to do half an hour intervals but for time sake I will do hours
 configure text areas from the bootstrap
 finding a way to make time function work, looking back on old classwork. 
 worked out how to get the time to display properly (had a p element aroung the span: delete)
+
+## further progress
+configuring the bootstrap container. Move to version 4, one of my scripts was causing confusion. I need past present and future indicators to link up in the js script.
+
+Events are active, removed the resizing feture and worked out the bootstrap box sizing of the rows/colums and jumbotron.

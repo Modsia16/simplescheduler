@@ -1,3 +1,27 @@
+/*google font*/
 body {
     font-family: 'Zen Loop', cursive;
+    margin-bottom: 20px;
 }
+/*event fillable boxes*/
+textarea {
+    resize: none;
+}
+
+
+/*past present and future features*/
+.past {
+    background-color: #be2c2c;
+    color: white;
+}
+  
+.present {
+    background-color: #1f1675;
+    color: white;
+}
+  
+.future {
+    background-color: #146b14;
+    color: white;
+}
+

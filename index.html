@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--APIs-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+<!--APIs-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,90 +13,86 @@
 <!--my css stylesheet-->
     <link rel="stylesheet" href="style.css">
    <title>Hello, world!</title>
-
-
   </head>
+  
   <body>
       <!--fluid jumbotron header-->
     <header>  
-    <div class="jumbotron jumbotron-fluid">
-        <div class="jumbotron">
-          <h1 class="display-4">Fluid jumbotron</h1>
-          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-          <span id="time-display">00:00:00</span>
-        </div>
+    <div class="jumbotron p-3 bg-dark text-white">
+          <h1 class="display-1">Daily Scheduler</h1>
+          <p class="lead display-4">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+          <span class="display-4" id="time-display">00:00:00</span>
     </div>
     </header>   
       <!--continer area and time rows-->
-      <div class="container">
-          <!--column names-->
-        <div class="row">
-          <div class="col-sm">Time</div>
-          <div class="col-sm">Event</div>
-          <div class="col-sm">Save</div>
-        </div>
-        <!--8am-->
-        <div class="row">
-          <div class="col-sm">8:00 am</div>
-          <textarea class="col-sm">Event</textarea>
-          <div class="col-sm">Save</div>
-        </div>
-          <!--9am-->
-        <div class="row">
-          <div class="col-sm">9:00 am</div>
-          <textarea class="col-sm">Event</textarea>
-          <div class="col-sm">Save</div>
-        </div>
-          <!--10am-->
-        <div class="row">
-          <div class="col-sm">10:00 am</div>
-          <textarea class="col-sm">Event</textarea>
-          <div class="col-sm">Save</div>
-        </div>
-          <!--11am-->
-        <div class="row">
-          <div class="col-sm">11:00 am</div>
-          <textarea class="col-sm">Event</textarea>
-          <div class="col-sm">Save</div>
-        </div>
-          <!--12pm-->
-        <div class="row">
-          <div class="col-sm">12:00 pm</div>
-          <textarea class="col-sm">Event</textarea>
-          <div class="col-sm">Save</div>
-        </div>
-          <!--1pm-->
-        <div class="row">
-          <div class="col-sm">1:00 pm</div>
-          <textarea class="col-sm">Event</textarea>
-          <div class="col-sm">Save</div>
-        </div>
-          <!--2pm-->
-        <div class="row">
-          <div class="col-sm">2:00 pm</div>
-          <textarea class="col-sm">Event</textarea>
-          <div class="col-sm">Save</div>
-        </div>
-          <!--3pm-->
-        <div class="row">
-          <div class="col-sm">3:00 pm</div>
-          <textarea class="col-sm">Event</textarea>
-          <div class="col-sm">Save</div>
-        </div>
-          <!--4pm-->
-        <div class="row">
-          <div class="col-sm">4:00 pm</div>
-          <textarea class="col-sm">Event</textarea>
-          <div class="col-sm">Save</div>
-        </div>
+      <div class="container font-weight-bold">
+            <!--column names-->
+          <div class="row display-4" id="headers">
+            <div class="col-sm-1">Time</div>
+            <div class="col-sm-8">Event</div>
+            <div class="col-sm-1">Save</div>
+          </div>
+          <!--8am-->
+          <div class="row eight">
+            <div id="hour" class="col-sm-1 time-slot" id="time">8:00 am</div>
+            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
+            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          </div>
+            <!--9am-->
+          <div class="row nine">
+            <div id="hour" class="col-sm-1 time-slot" id="time">9:00 am</div>
+            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
+            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          </div>
+            <!--10am-->
+          <div class="row ten">
+            <div id="hour" class="col-sm-1 time-slot" id="time">10:00 am</div>
+            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
+            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          </div>
+            <!--11am-->
+          <div class="row eleven">
+            <div id="hour" class="col-sm-1 time-slot" id="time">11:00 am</div>
+            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
+            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          </div>
+            <!--12pm-->
+          <div class="row twelve">
+            <div id="hour" class="col-sm-1 time-slot" id="time">12:00 pm</div>
+            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
+            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          </div>
+            <!--1pm-->
+          <div class="row one">
+            <div id="hour" class="col-sm-1 time-slot" id="time">1:00 pm</div>
+            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
+            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          </div>
+            <!--2pm-->
+          <div class="row two">
+            <div id="hour" class="col-sm-1 time-slot" id="time">2:00 pm</div>
+            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
+            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          </div>
+            <!--3pm-->
+          <div class="row three">
+            <div id="hour" class="col-sm-1 time-slot" id="time">3:00 pm</div>
+            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
+            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          </div>
+            <!--4pm-->
+          <div class="row four">
+            <div id="hour" class="col-sm-1 time-slot" id="time">4:00 pm</div>
+            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
+            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          </div>
       </div>
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
       <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-      <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-      <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>-->
       <script src="script.js"></script>
   
   </body>
