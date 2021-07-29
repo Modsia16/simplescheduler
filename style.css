@@ -1,8 +1,12 @@
 /*google font*/
 body {
     font-family: 'Zen Loop', cursive;
-    margin-bottom: 20px;
+    background-image: url('https://images.unsplash.com/photo-1558560549-928ad67a85ea?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBhbmQlMjB3aGl0ZSUyMGZsb3dlcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+
 /*event fillable boxes*/
 textarea {
     resize: none;

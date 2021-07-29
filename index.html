@@ -12,79 +12,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap" rel="stylesheet">
 <!--my css stylesheet-->
     <link rel="stylesheet" href="style.css">
-   <title>Hello, world!</title>
+   <title>Scheduler</title>
   </head>
   
   <body>
-      <!--fluid jumbotron header-->
+      <!--Jumbotron header-->
     <header>  
     <div class="jumbotron p-3 bg-dark text-white">
           <h1 class="display-1">Daily Scheduler</h1>
-          <p class="lead display-4">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+          <p class="lead display-4">A simple way to track your day</p>
           <span class="display-4" id="time-display">00:00:00</span>
     </div>
     </header>   
       <!--continer area and time rows-->
       <div class="container font-weight-bold">
-            <!--column names-->
-          <div class="row display-4" id="headers">
-            <div class="col-sm-1">Time</div>
-            <div class="col-sm-8">Event</div>
-            <div class="col-sm-1">Save</div>
-          </div>
+          <!--workable area of scheduler-->
           <!--8am-->
-          <div class="row eight">
-            <div id="hour" class="col-sm-1 time-slot" id="time">8:00 am</div>
-            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
-            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          <div id="row-eight" class="row hour-block text-white">
+            <div class="col-sm-1 bg-dark border border-light time-slot">8:00 am</div>
+            <textarea class="col-sm-8 task" placeholder="Event"></textarea>
+            <button id="save-btn8" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light"><i class="fas fa-save">Save</i></button>
           </div>
             <!--9am-->
-          <div class="row nine">
-            <div id="hour" class="col-sm-1 time-slot" id="time">9:00 am</div>
-            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
-            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          <div id="row-nine" class="row hour-block text-white">
+            <div class="col-sm-1 bg-dark border border-light time-slot" id="time">9:00 am</div>
+            <textarea class="col-sm-8 task" placeholder="Event"></textarea>
+            <!--i save for buttons-->
+            <button id="save-btn9" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light"><i class="fas fa-save">Save</i></button>
           </div>
             <!--10am-->
-          <div class="row ten">
-            <div id="hour" class="col-sm-1 time-slot" id="time">10:00 am</div>
-            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
-            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          <div id="row-ten" class="row hour-block text-white">
+            <div class="col-sm-1 bg-dark border border-light time-slot" id="time">10:00 am</div>
+            <textarea class="col-sm-8 task" placeholder="Event"></textarea>
+            <button id="save-btn10" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light"><i class="fas fa-save"></i>Save</button>
           </div>
             <!--11am-->
-          <div class="row eleven">
-            <div id="hour" class="col-sm-1 time-slot" id="time">11:00 am</div>
-            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
-            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          <div id="row-eleven" class="row hour-block text-white">
+            <div class="col-sm-1 bg-dark border border-light time-slot" id="time">11:00 am</div>
+            <textarea class="col-sm-8 task" placeholder="Event"></textarea>
+            <button id="save-btn11" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light"><i class="fas fa-save"></i>Save</button>
           </div>
             <!--12pm-->
-          <div class="row twelve">
-            <div id="hour" class="col-sm-1 time-slot" id="time">12:00 pm</div>
-            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
-            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          <div id="row-twelve" class="row hour-block text-white">
+            <div class="col-sm-1 bg-dark border border-light time-slot" id="time">12:00 pm</div>
+            <textarea class="col-sm-8 task" placeholder="Event"></textarea>
+            <button id="save-btn12" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light"><i class="fas fa-save"></i>Save</button>
           </div>
             <!--1pm-->
-          <div class="row one">
-            <div id="hour" class="col-sm-1 time-slot" id="time">1:00 pm</div>
-            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
-            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          <div id="row-one" class="row hour-block text-white">
+            <div class="col-sm-1 bg-dark border border-light time-slot" id="time">1:00 pm</div>
+            <textarea class="col-sm-8 task" placeholder="Event"></textarea>
+            <button id="save-btn1" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light"><i class="fas fa-save"></i>Save</button>
           </div>
             <!--2pm-->
-          <div class="row two">
-            <div id="hour" class="col-sm-1 time-slot" id="time">2:00 pm</div>
-            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
-            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          <div id="row-two" class="row hour-block text-white">
+            <div class="col-sm-1 bg-dark border border-light time-slot" id="time">2:00 pm</div>
+            <textarea class="col-sm-8 task" placeholder="Event"></textarea>
+            <button id="save-btn2" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light"><i class="fas fa-save"></i>Save</button>
           </div>
             <!--3pm-->
-          <div class="row three">
-            <div id="hour" class="col-sm-1 time-slot" id="time">3:00 pm</div>
-            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
-            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          <div id="row-three" class="row hour-block text-white">
+            <div class="col-sm-1 bg-dark border border-light time-slot" id="time">3:00 pm</div>
+            <textarea class="col-sm-8 task" placeholder="Event"></textarea>
+            <button id="save-btn3" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light"><i class="fas fa-save"></i>Save</button>
           </div>
             <!--4pm-->
-          <div class="row four">
-            <div id="hour" class="col-sm-1 time-slot" id="time">4:00 pm</div>
-            <textarea id="event" class="col-sm-8 event" placeholder="Event"></textarea>
-            <button id="save-btn" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light">Save</button>
+          <div id="row-four" class="row hour-block text-white">
+            <div class="col-sm-1 bg-dark border border-light time-slot" id="time">4:00 pm</div>
+            <textarea class="col-sm-8 task" placeholder="Event"></textarea>
+            <button id="save-btn4" type="button" class="col-sm-1 save-btn btn btn-dark btn btn-outline-light"><i class="fas fa-save"></i>Save</button>
           </div>
       </div>
 
