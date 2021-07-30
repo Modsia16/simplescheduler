@@ -1,5 +1,4 @@
 /*top time display*/
-var timeNow = moment().hour(); //moved up 
 $(document).ready(function () { 
 
 var timeDisplayEl = $('#time-display');
@@ -16,15 +15,13 @@ setInterval(displayTime, 1000);
     $(".save-btn").on("click", function () {
         var text = $(this).siblings(".task").val();
         var time = $(this).parent().attr("id");
-
         localStorage.setItem(time, text); /*not working */
     })
 
     /*past present future tracker*/
 function timeStat() { /* not working properly*/
- 
+    var timeNow = moment().hours();
 /*background time color change*/
-console.log(timeNow)
     $(".hour-block .task").each(function () {
         var blockTime = parseInt($(this).attr("id"));
         console.log(blockTime)
@@ -36,7 +33,7 @@ console.log(timeNow)
         else if (blockTime === timeNow) {
             $(this).removeClass("past");
             $(this).removeClass("future");
-            $(this).addClass("past");
+            $(this).addClass("present");
         }
         else {
             $(this).removeClass("present");
