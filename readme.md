@@ -35,3 +35,6 @@ notate how moment is used for future projects. Numbers were changed in the id to
 
 Fixed container box and font, changed css colors a little bit.
 
+![screenshot](sched-screenshot.png)
+
+![deplyed page](https://modsia16.github.io/simplescheduler/)
