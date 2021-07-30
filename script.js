@@ -1,3 +1,7 @@
+/*top time display*/
+var timeNow = moment().hour(); //moved up 
+$(document).ready(function () { 
+
 var timeDisplayEl = $('#time-display');
 
 function displayTime() {
@@ -5,32 +9,34 @@ function displayTime() {
     timeDisplayEl.text(rightNow);
   } 
 
+setInterval(displayTime, 1000);
+
 /*relaying textarea to the save*/
 
-$(document).ready(function (){ 
     $(".save-btn").on("click", function () {
         var text = $(this).siblings(".task").val();
         var time = $(this).parent().attr("id");
 
-        localStorage.setItem(time, text);
-})
+        localStorage.setItem(time, text); /*not working */
+    })
+
     /*past present future tracker*/
-function myFunction() {
-    
-    var rightNow = moment().hour();
+function timeStat() { /* not working properly*/
+ 
 /*background time color change*/
-    $(".hour-block").each(function () {
-        var blockTime = parseInt($(this).attr("id").split("hour")[1]);
-        
-        if (blockTime < rightNow) {
-            $(this).removeClass("#future");
-            $(this).removeClass("#present");
-            $(this).addClass("#past");
+console.log(timeNow)
+    $(".hour-block .task").each(function () {
+        var blockTime = parseInt($(this).attr("id"));
+        console.log(blockTime)
+        if (blockTime < timeNow) {
+            $(this).removeClass("present");
+            $(this).removeClass("future");
+            $(this).addClass("past");
         }
-        else if (blockTime === rightNow) {
+        else if (blockTime === timeNow) {
             $(this).removeClass("past");
             $(this).removeClass("future");
-            $(this).addClass("present");
+            $(this).addClass("past");
         }
         else {
             $(this).removeClass("present");
@@ -38,15 +44,19 @@ function myFunction() {
             $(this).addClass("future")
         }         
     })
+    
 }
 
-/*storage gets*/
-/*$()
-if (localStorage.getItem('.text') !== null) {
-    console.log(`Task exists`);
-} else {
-    console.log(`Task does not exist`);
-}*/
+timeStat()
 
-setInterval(displayTime, 1000);
+$("#row-eight .task").val(localStorage.getItem("row-eight"))
+$("#row-nine .task").val(localStorage.getItem("row-nine"))
+$("#row-ten .task").val(localStorage.getItem("row-ten"))
+$("#row-eleven .task").val(localStorage.getItem("row-eleven"))
+$("#row-twelve .task").val(localStorage.getItem("row-twelve"))
+$("#row-one .task").val(localStorage.getItem("row-one"))
+$("#row-two .task").val(localStorage.getItem("row-two"))
+$("#row-three .task").val(localStorage.getItem("row-three"))
+$("#row-four .task").val(localStorage.getItem("row-four"))
+
 })

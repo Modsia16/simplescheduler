@@ -28,3 +28,6 @@ worked out how to get the time to display properly (had a p element aroung the s
 configuring the bootstrap container. Move to version 4, one of my scripts was causing confusion. I need past present and future indicators to link up in the js script.
 
 Events are active, removed the resizing feture and worked out the bootstrap box sizing of the rows/colums and jumbotron.
+
+Most of the code is set up, the color code and local storage are not testing out they way they should - going to work with tutor 
+
